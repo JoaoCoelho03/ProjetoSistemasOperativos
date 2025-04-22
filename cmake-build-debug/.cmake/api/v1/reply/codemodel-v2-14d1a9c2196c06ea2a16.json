@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "projeto_so",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "projeto_so::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-projeto_so-Debug-8f72174731dfc4070a48.json",
+					"name" : "projeto_so",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "projeto_so_prodcons::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-projeto_so_prodcons-Debug-b234511d82974fcaff9d.json",
+					"name" : "projeto_so_prodcons",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "projeto_so_sockets::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-projeto_so_sockets-Debug-9782852f769aa323bb0d.json",
+					"name" : "projeto_so_sockets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "projeto_so_threads::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-projeto_so_threads-Debug-b37cbb4df4643bfd4a69.json",
+					"name" : "projeto_so_threads",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/joaosousa/CLionProjects/projeto_so/cmake-build-debug",
+		"source" : "/home/joaosousa/CLionProjects/projeto_so"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -1,0 +1,18 @@
+# ninja log v6
+2	40	1745320782267799773	build.ninja	bee909a345116899
+2	6	1745320728860567331	clean	c88349c9cd4d65bc
+74	125	1745320729079568287	CMakeFiles/projeto_so_sockets.dir/utils.c.o	b522e9aa409b023c
+324	385	1745320729330569381	projeto_so_threads	e19bc020ad86fb37
+345	390	1745320729350569468	projeto_so_prodcons	77268a1ba6957350
+65	145	1745320729070568247	CMakeFiles/projeto_so_sockets.dir/process_sensor_sockets.c.o	60163f86abc81080
+145	209	1745320729150568596	CMakeFiles/projeto_so_prodcons.dir/main_prodcons.c.o	b2155ab16382d1d5
+211	324	1745320729216568884	CMakeFiles/projeto_so_prodcons.dir/process_sensor_prodcons.c.o	7fee294798ef2044
+42	135	1745320729047568147	CMakeFiles/projeto_so_sockets.dir/main_sockets.c.o	de50df2bc81391af
+212	271	1745320729217568888	CMakeFiles/projeto_so_prodcons.dir/utils.c.o	58a870c19f97e532
+2	42	1745320729007567973	CMakeFiles/projeto_so.dir/utils.c.o	bdff0a5c046e81dc
+1	65	1745320729006567968	CMakeFiles/projeto_so.dir/main.c.o	c11e215883c3d3c7
+271	346	1745320729276569145	projeto_so_sockets	18e1f28e299ffa6
+259	345	1745320729264569093	projeto_so	44e3a805b37d3863
+2	74	1745320729007567973	CMakeFiles/projeto_so.dir/process_sensor.c.o	a277e62644833177
+125	212	1745320729130568509	CMakeFiles/projeto_so_threads.dir/main_threads.c.o	1ef0f27718dd678e
+136	259	1745320729141568557	CMakeFiles/projeto_so_threads.dir/process_sensor_threads.c.o	cd4c0df5b6d18672

@@ -1,0 +1,6 @@
+/home/joaosousa/CLionProjects/projeto_so/cmake-build-debug/CMakeFiles/projeto_so.dir
+/home/joaosousa/CLionProjects/projeto_so/cmake-build-debug/CMakeFiles/projeto_so_sockets.dir
+/home/joaosousa/CLionProjects/projeto_so/cmake-build-debug/CMakeFiles/projeto_so_threads.dir
+/home/joaosousa/CLionProjects/projeto_so/cmake-build-debug/CMakeFiles/projeto_so_prodcons.dir
+/home/joaosousa/CLionProjects/projeto_so/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/joaosousa/CLionProjects/projeto_so/cmake-build-debug/CMakeFiles/rebuild_cache.dir
