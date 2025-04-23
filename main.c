@@ -22,11 +22,20 @@ typedef struct {
 
 void *barra_progresso(void *arg) {
     int ultima_percentagem = -1;
+
+    // A barra de progresso será atualizada enquanto o processo não terminar
     while (!progresso_concluido) {
+        // Calcular o progresso com base no número de sensores processados
         int percent = (sensores_processados * 100) / total_sensores;
+
+        // Atualizar a barra de progresso quando o percentual mudar
         if (percent != ultima_percentagem) {
             ultima_percentagem = percent;
+
+            // Calcular a quantidade de barras para mostrar na barra de progresso
             int barras = percent / 10;
+
+            // Imprimir a barra de progresso no terminal
             printf("\rProgresso: [");
             for (int i = 0; i < 10; i++) {
                 if (i < barras) printf("=");
@@ -34,10 +43,14 @@ void *barra_progresso(void *arg) {
                 else printf(" ");
             }
             printf("] %d%%", percent);
-            fflush(stdout);
+            fflush(stdout);  // Garantir que o terminal seja atualizado
         }
-        sleep(1);
+
+        // Aguardar 5 segundos para continuar atualizando a barra
+        sleep(5);  // Atualiza a barra de progresso a cada 5 segundos
     }
+
+    // Mostrar 100% quando o progresso for concluído
     printf("\rProgresso: [==========>] 100%%\n");
     return NULL;
 }
