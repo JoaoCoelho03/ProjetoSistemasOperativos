@@ -15,7 +15,6 @@ volatile int sensores_processados = 0;
 int total_sensores = 0;
 bool progresso_concluido = false;
 
-// Armazena os pipes e número de sensores para thread de leitura
 typedef struct {
     int (*pipes)[2];
     int num_sensores;
