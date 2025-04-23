@@ -41,7 +41,8 @@ void *processar_sensor_thread(void *args) {
     close(fd);
 
     double soma = 0;
-    int count = 0, fora = 0;
+    int count = 0;
+    double fora = 0;
     double valor;
     char sensor_name[128], timestamp[64];
     time_t prev_time = 0, current_time;

@@ -44,7 +44,8 @@ void process_sensor_socket(const char *filepath) {
     close(fd);
 
     double soma = 0;
-    int count = 0, fora = 0;
+    int count = 0;
+    double fora = 0;
     double valor;
     char sensor_name[128], timestamp[64];
     time_t prev_time = 0, current_time;
@@ -81,7 +82,7 @@ void process_sensor_socket(const char *filepath) {
 
     double media = count > 0 ? soma / count : 0;
     char mensagem[256];
-    snprintf(mensagem, sizeof(mensagem), "%d;%s;%.2f;%d", getpid(), sensor_name, media, fora);
+    snprintf(mensagem, sizeof(mensagem), "%d;%s;%.2f;%.2f", getpid(), sensor_name, media, fora);
 
     // Enviar via socket
     int sock = socket(AF_UNIX, SOCK_STREAM, 0);

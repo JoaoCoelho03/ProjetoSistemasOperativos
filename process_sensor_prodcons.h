@@ -6,7 +6,7 @@
 typedef struct {
     char nome_sensor[128];
     double media;
-    int horas_fora;
+    double horas_fora;
 } DadoSensor;
 
 typedef struct {

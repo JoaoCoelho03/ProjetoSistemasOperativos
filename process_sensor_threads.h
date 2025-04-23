@@ -5,7 +5,7 @@ typedef struct {
     int thread_id;
     char nome_sensor[128];
     double media;
-    int horas_fora;
+    double horas_fora;
 } ResultadoSensor;
 
 typedef struct {

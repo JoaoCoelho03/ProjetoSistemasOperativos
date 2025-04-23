@@ -56,7 +56,7 @@ void *consumidor(void *arg) {
         pthread_mutex_unlock(&fila->mutex); // Libera acesso à fila
 
         // Processa os dados
-        printf("Consumidor processando: %s - Média: %.2f - Horas fora: %d\n",
+        printf("Consumidor processando: %s - Média: %.2f - Horas fora: %.2f\n",
             dado.nome_sensor, dado.media, dado.horas_fora);
 
         usleep(500000);  // Simula o tempo de processamento
