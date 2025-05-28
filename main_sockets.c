@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    unlink(SOCKET_PATH); // Garantir que não existe já
+    unlink(SOCKET_PATH);
     int server_sock = socket(AF_UNIX, SOCK_STREAM, 0);
     struct sockaddr_un addr;
     memset(&addr, 0, sizeof(addr));

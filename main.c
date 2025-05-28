@@ -4,78 +4,14 @@
 #include <dirent.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#include <pthread.h>
 #include <stdbool.h>
+#include <time.h>
 #include "process_sensor.h"
 #include "utils.h"
 
 #define MAX_FILES 100
 
-volatile int sensores_processados = 0;
 int total_sensores = 0;
-bool progresso_concluido = false;
-int ficheiros_processados = 0;  // Variável global de ficheiros processados
-
-pthread_mutex_t mutex_progresso = PTHREAD_MUTEX_INITIALIZER;  // Mutex para proteger 'ficheiros_processados'
-
-// Estrutura para leitura de pipes
-typedef struct {
-    int (*pipes)[2];
-    int num_sensores;
-} LeituraArgs;
-
-// Função da barra de progresso
-void *barra_progresso(void *arg) {
-    int ultima_percentagem = -1;
-
-    while (!progresso_concluido){
-
-        int percent = (ficheiros_processados * 100) / total_sensores;
-
-        if (percent != ultima_percentagem) {
-            ultima_percentagem = percent;
-
-            int barras = percent / 10;
-
-            printf("\rProgresso: [");
-            for (int i = 0; i < 10; i++) {
-                if (i < barras) printf("=");
-                else if (i == barras) printf(">");
-                else printf(" ");
-            }
-            printf("] %d%%", percent);
-            fflush(stdout);
-        }
-
-    }
-
-    printf("\rProgresso: [==========>] 100%%\n");
-    return NULL;
-}
-
-
-void *ler_pipes(void *arg) {
-    LeituraArgs *args = (LeituraArgs *)arg;
-    FILE *saida = fopen("relatorio.txt", "w");
-    if (!saida) {
-        perror("Erro ao criar relatorio.txt");
-        exit(EXIT_FAILURE);
-    }
-
-    char buffer[256];
-    for (int i = 0; i < args->num_sensores; i++) {
-        readn(args->pipes[i][0], buffer, sizeof(buffer));
-        fprintf(saida, "%s\n", buffer);
-        close(args->pipes[i][0]);
-
-        pthread_mutex_lock(&mutex_progresso);
-        ficheiros_processados++;
-        pthread_mutex_unlock(&mutex_progresso);
-    }
-
-    fclose(saida);
-    return NULL;
-}
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
@@ -123,28 +59,48 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    pthread_t thread_barra, thread_leitura;
+    FILE *saida = fopen("relatorio.txt", "w");
+    if (!saida) {
+        perror("Erro ao criar relatorio.txt");
+        exit(EXIT_FAILURE);
+    }
 
-    LeituraArgs args = {
-        .pipes = pipes,
-        .num_sensores = num_ficheiros
-    };
+    char buffer[256];
+    int ficheiros_processados = 0;
+    time_t ultimo_update = time(NULL);
 
+    for (int i = 0; i < num_ficheiros; i++) {
+        readn(pipes[i][0], buffer, sizeof(buffer));
+        fprintf(saida, "%s\n", buffer);
+        close(pipes[i][0]);
 
-    pthread_create(&thread_barra, NULL, barra_progresso, NULL);
-    pthread_create(&thread_leitura, NULL, ler_pipes, &args);
+        ficheiros_processados++;
 
+        time_t agora = time(NULL);
+        if (difftime(agora, ultimo_update) >= 5 || ficheiros_processados == total_sensores) {
+            int percent = (ficheiros_processados * 100) / total_sensores;
+            int barras = percent / 10;
+
+            printf("\rProgresso: [");
+            for (int j = 0; j < 10; j++) {
+                if (j < barras) printf("=");
+                else if (j == barras) printf(">");
+                else printf(" ");
+            }
+            printf("] %d%%", percent);
+            fflush(stdout);
+
+            ultimo_update = agora;
+        }
+    }
+
+    fclose(saida);
 
     for (int i = 0; i < num_ficheiros; i++) {
         waitpid(filhos[i], NULL, 0);
         free(ficheiros[i]);
     }
 
-
-    pthread_join(thread_leitura, NULL);
-    progresso_concluido = true;
-    pthread_join(thread_barra, NULL);
-
-    printf("Relatório gerado com sucesso em 'relatorio.txt'\n");
+    printf("\nRelatório gerado com sucesso em 'relatorio.txt'\n");
     return 0;
 }

@@ -8,17 +8,9 @@
 #include <sys/stat.h>
 #include <time.h>
 #include "process_sensor.h"
-
-#include <pthread.h>
-
 #include "utils.h"
 
-
 #define TIME_FORMAT "%Y-%m-%dT%H:%M:%S"
-
-
-extern volatile int ficheiros_processados;
-extern pthread_mutex_t mutex_progresso;
 
 time_t parse_timestamp(const char *timestamp) {
     struct tm tm;
@@ -27,7 +19,6 @@ time_t parse_timestamp(const char *timestamp) {
     return mktime(&tm);
 }
 
-// Verifica se o valor está fora do intervalo aceitável com base no sensor
 int fora_do_intervalo(const char *sensor, double valor) {
     if (strstr(sensor, "temperatura")) {
         return (valor < 18 || valor > 27);
@@ -94,7 +85,7 @@ void process_sensor_file(const char *filepath, int fd_write) {
                 current_time = parse_timestamp(timestamp);
                 if (fora_do_intervalo(filepath, valor)) {
                     if (!primeira) {
-                        fora += difftime(current_time, prev_time) / 3600.0; // Em horas
+                        fora += difftime(current_time, prev_time) / 3600.0;
                     }
                     primeira = 0;
                 } else {
@@ -113,10 +104,4 @@ void process_sensor_file(const char *filepath, int fd_write) {
     char resultado[256];
     snprintf(resultado, sizeof(resultado), "%d;%s;%.2f;%.2f", getpid(), sensor_name, media, fora);
     writen(fd_write, resultado, strlen(resultado) + 1);
-
-
-    pthread_mutex_lock(&mutex_progresso);
-    ficheiros_processados++;
-    pthread_mutex_unlock(&mutex_progresso);
 }
-

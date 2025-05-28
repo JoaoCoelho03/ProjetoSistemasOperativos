@@ -38,7 +38,7 @@ int main() {
 
     int dados_por_produtora = TOTAL_DADOS / NUM_PRODUTORAS;
 
-    // Criar produtoras
+
     for (int i = 0; i < NUM_PRODUTORAS; i++) {
         args_produtores[i].fila = &fila;
         args_produtores[i].start_index = i * dados_por_produtora;
@@ -47,7 +47,7 @@ int main() {
         pthread_create(&produtores[i], NULL, produtor, &args_produtores[i]);
     }
 
-    // Criar consumidoras
+
     for (int i = 0; i < NUM_CONSUMIDORAS; i++) {
         pthread_create(&consumidores[i], NULL, consumidor, &fila);
     }

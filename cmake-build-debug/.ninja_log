@@ -40,3 +40,11 @@
 2	84	1748431456163717356	CMakeFiles/projeto_so_prodcons.dir/main_prodcons.c.o	b2155ab16382d1d5
 3	89	1748431456164717366	CMakeFiles/projeto_so_prodcons.dir/process_sensor_prodcons.c.o	7fee294798ef2044
 89	119	1748431456251718196	projeto_so_prodcons	77268a1ba6957350
+28	374	1748432123443873136	CMakeFiles/projeto_so_sockets.dir/utils.c.o	b522e9aa409b023c
+8	375	1748432123423873187	CMakeFiles/projeto_so_sockets.dir/main_sockets.c.o	de50df2bc81391af
+17	375	1748432123432873164	CMakeFiles/projeto_so_sockets.dir/process_sensor_sockets.c.o	60163f86abc81080
+375	668	1748432123790872250	projeto_so_sockets	18e1f28e299ffa6
+3	133	1748432173926772592	CMakeFiles/projeto_so.dir/main.c.o	c11e215883c3d3c7
+4	78	1748432369457841897	CMakeFiles/projeto_so.dir/process_sensor.c.o	a277e62644833177
+2	84	1748432369455841893	CMakeFiles/projeto_so.dir/main.c.o	c11e215883c3d3c7
+84	123	1748432369537842052	projeto_so	44e3a805b37d3863
