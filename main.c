@@ -14,28 +14,29 @@
 volatile int sensores_processados = 0;
 int total_sensores = 0;
 bool progresso_concluido = false;
+int ficheiros_processados = 0;  // Variável global de ficheiros processados
 
+pthread_mutex_t mutex_progresso = PTHREAD_MUTEX_INITIALIZER;  // Mutex para proteger 'ficheiros_processados'
+
+// Estrutura para leitura de pipes
 typedef struct {
     int (*pipes)[2];
     int num_sensores;
 } LeituraArgs;
 
+// Função da barra de progresso
 void *barra_progresso(void *arg) {
     int ultima_percentagem = -1;
 
-    // A barra de progresso será atualizada enquanto o processo não terminar
-    while (!progresso_concluido) {
-        // Calcular o progresso com base no número de sensores processados
-        int percent = (sensores_processados * 100) / total_sensores;
+    while (!progresso_concluido){
 
-        // Atualizar a barra de progresso quando o percentual mudar
+        int percent = (ficheiros_processados * 100) / total_sensores;
+
         if (percent != ultima_percentagem) {
             ultima_percentagem = percent;
 
-            // Calcular a quantidade de barras para mostrar na barra de progresso
             int barras = percent / 10;
 
-            // Imprimir a barra de progresso no terminal
             printf("\rProgresso: [");
             for (int i = 0; i < 10; i++) {
                 if (i < barras) printf("=");
@@ -43,17 +44,15 @@ void *barra_progresso(void *arg) {
                 else printf(" ");
             }
             printf("] %d%%", percent);
-            fflush(stdout);  // Garantir que o terminal seja atualizado
+            fflush(stdout);
         }
 
-        // Aguardar 5 segundos para continuar atualizando a barra
-        sleep(5);  // Atualiza a barra de progresso a cada 5 segundos
     }
 
-    // Mostrar 100% quando o progresso for concluído
     printf("\rProgresso: [==========>] 100%%\n");
     return NULL;
 }
+
 
 void *ler_pipes(void *arg) {
     LeituraArgs *args = (LeituraArgs *)arg;
@@ -68,7 +67,10 @@ void *ler_pipes(void *arg) {
         readn(args->pipes[i][0], buffer, sizeof(buffer));
         fprintf(saida, "%s\n", buffer);
         close(args->pipes[i][0]);
-        sensores_processados++;
+
+        pthread_mutex_lock(&mutex_progresso);
+        ficheiros_processados++;
+        pthread_mutex_unlock(&mutex_progresso);
     }
 
     fclose(saida);
@@ -128,13 +130,16 @@ int main(int argc, char *argv[]) {
         .num_sensores = num_ficheiros
     };
 
+
     pthread_create(&thread_barra, NULL, barra_progresso, NULL);
     pthread_create(&thread_leitura, NULL, ler_pipes, &args);
+
 
     for (int i = 0; i < num_ficheiros; i++) {
         waitpid(filhos[i], NULL, 0);
         free(ficheiros[i]);
     }
+
 
     pthread_join(thread_leitura, NULL);
     progresso_concluido = true;

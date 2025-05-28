@@ -1,7 +1,10 @@
 #ifndef PROCESS_SENSOR_PRODCONS_H
 #define PROCESS_SENSOR_PRODCONS_H
 
-#define MAX_FILA 10  // Tamanho da fila de dados
+#define MAX_FILA 10
+#define TOTAL_DADOS 20
+#define NUM_CONSUMIDORAS 2
+#define NUM_PRODUTORAS 2
 
 typedef struct {
     char nome_sensor[128];
@@ -15,6 +18,13 @@ typedef struct {
     int fim;
     pthread_mutex_t mutex;
 } FilaDados;
+
+typedef struct {
+    FilaDados *fila;
+    int start_index;
+    int total_gerar;
+} ArgsProdutor;
+
 
 void *produtor(void *arg);
 void *consumidor(void *arg);

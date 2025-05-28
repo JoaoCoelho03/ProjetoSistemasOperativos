@@ -8,10 +8,17 @@
 #include <sys/stat.h>
 #include <time.h>
 #include "process_sensor.h"
+
+#include <pthread.h>
+
 #include "utils.h"
 
 
 #define TIME_FORMAT "%Y-%m-%dT%H:%M:%S"
+
+
+extern volatile int ficheiros_processados;
+extern pthread_mutex_t mutex_progresso;
 
 time_t parse_timestamp(const char *timestamp) {
     struct tm tm;
@@ -70,7 +77,6 @@ void process_sensor_file(const char *filepath, int fd_write) {
     char *linha = data;
     char *fim = data;
 
-
     while (*fim != '\n' && fim < data + sb.st_size) fim++;
     linha = fim + 1;
 
@@ -108,4 +114,9 @@ void process_sensor_file(const char *filepath, int fd_write) {
     snprintf(resultado, sizeof(resultado), "%d;%s;%.2f;%.2f", getpid(), sensor_name, media, fora);
     writen(fd_write, resultado, strlen(resultado) + 1);
 
+
+    pthread_mutex_lock(&mutex_progresso);
+    ficheiros_processados++;
+    pthread_mutex_unlock(&mutex_progresso);
 }
+

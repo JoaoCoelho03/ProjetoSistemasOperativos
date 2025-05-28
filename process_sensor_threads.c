@@ -46,7 +46,7 @@ void *processar_sensor_thread(void *args) {
     double valor;
     char sensor_name[128], timestamp[64];
     time_t prev_time = 0, current_time;
-    int primeira = 1;
+    int em_fora = 0;
 
     char *linha = data;
     char *fim = data;
@@ -65,12 +65,19 @@ void *processar_sensor_thread(void *args) {
                 soma += valor;
                 count++;
                 current_time = parse_timestamp(timestamp);
+
                 if (fora_do_intervalo(targs->filepath, valor)) {
-                    if (!primeira) fora += difftime(current_time, prev_time) / 3600.0;
-                    primeira = 0;
-                } else primeira = 1;
+                    if (em_fora) {
+                        fora += difftime(current_time, prev_time) / 3600.0;
+                    }
+                    em_fora = 1;
+                } else {
+                    em_fora = 0;
+                }
+
                 prev_time = current_time;
             }
+
             linha = fim + 1;
         }
         fim++;

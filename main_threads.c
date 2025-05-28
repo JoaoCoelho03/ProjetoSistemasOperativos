@@ -64,7 +64,6 @@ int main(int argc, char *argv[]) {
     ResultadoSensor resultados[num_ficheiros];
     ThreadArgs args[num_ficheiros];
 
-    // Inicia thread de progresso
     pthread_t progresso_thread;
     pthread_create(&progresso_thread, NULL, barra_progresso, &num_ficheiros);
 
@@ -85,7 +84,7 @@ int main(int argc, char *argv[]) {
 
     FILE *saida = fopen("relatorio_threads.txt", "w");
     for (int i = 0; i < num_ficheiros; i++) {
-        fprintf(saida, "Thread %d;%s;%.2f;%d\n",
+        fprintf(saida, "Thread %d;%s;%.2f;%f\n",
                 resultados[i].thread_id,
                 resultados[i].nome_sensor,
                 resultados[i].media,

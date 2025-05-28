@@ -54,18 +54,24 @@ build CMakeFiles/projeto_so.dir/main.c.o: C_COMPILER__projeto_so_unscanned_Debug
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/projeto_so.dir
   OBJECT_FILE_DIR = CMakeFiles/projeto_so.dir
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so.dir/
+  TARGET_PDB = projeto_so.pdb
 
 build CMakeFiles/projeto_so.dir/utils.c.o: C_COMPILER__projeto_so_unscanned_Debug /home/joaosousa/CLionProjects/projeto_so/utils.c || cmake_object_order_depends_target_projeto_so
   DEP_FILE = CMakeFiles/projeto_so.dir/utils.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/projeto_so.dir
   OBJECT_FILE_DIR = CMakeFiles/projeto_so.dir
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so.dir/
+  TARGET_PDB = projeto_so.pdb
 
 build CMakeFiles/projeto_so.dir/process_sensor.c.o: C_COMPILER__projeto_so_unscanned_Debug /home/joaosousa/CLionProjects/projeto_so/process_sensor.c || cmake_object_order_depends_target_projeto_so
   DEP_FILE = CMakeFiles/projeto_so.dir/process_sensor.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/projeto_so.dir
   OBJECT_FILE_DIR = CMakeFiles/projeto_so.dir
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so.dir/
+  TARGET_PDB = projeto_so.pdb
 
 
 # =============================================================================
@@ -82,8 +88,9 @@ build projeto_so: C_EXECUTABLE_LINKER__projeto_so_Debug CMakeFiles/projeto_so.di
   OBJECT_DIR = CMakeFiles/projeto_so.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so.dir/
   TARGET_FILE = projeto_so
-  TARGET_PDB = projeto_so.dbg
+  TARGET_PDB = projeto_so.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target projeto_so_sockets
@@ -99,18 +106,24 @@ build CMakeFiles/projeto_so_sockets.dir/main_sockets.c.o: C_COMPILER__projeto_so
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/projeto_so_sockets.dir
   OBJECT_FILE_DIR = CMakeFiles/projeto_so_sockets.dir
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so_sockets.dir/
+  TARGET_PDB = projeto_so_sockets.pdb
 
 build CMakeFiles/projeto_so_sockets.dir/process_sensor_sockets.c.o: C_COMPILER__projeto_so_sockets_unscanned_Debug /home/joaosousa/CLionProjects/projeto_so/process_sensor_sockets.c || cmake_object_order_depends_target_projeto_so_sockets
   DEP_FILE = CMakeFiles/projeto_so_sockets.dir/process_sensor_sockets.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/projeto_so_sockets.dir
   OBJECT_FILE_DIR = CMakeFiles/projeto_so_sockets.dir
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so_sockets.dir/
+  TARGET_PDB = projeto_so_sockets.pdb
 
 build CMakeFiles/projeto_so_sockets.dir/utils.c.o: C_COMPILER__projeto_so_sockets_unscanned_Debug /home/joaosousa/CLionProjects/projeto_so/utils.c || cmake_object_order_depends_target_projeto_so_sockets
   DEP_FILE = CMakeFiles/projeto_so_sockets.dir/utils.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/projeto_so_sockets.dir
   OBJECT_FILE_DIR = CMakeFiles/projeto_so_sockets.dir
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so_sockets.dir/
+  TARGET_PDB = projeto_so_sockets.pdb
 
 
 # =============================================================================
@@ -127,8 +140,9 @@ build projeto_so_sockets: C_EXECUTABLE_LINKER__projeto_so_sockets_Debug CMakeFil
   OBJECT_DIR = CMakeFiles/projeto_so_sockets.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so_sockets.dir/
   TARGET_FILE = projeto_so_sockets
-  TARGET_PDB = projeto_so_sockets.dbg
+  TARGET_PDB = projeto_so_sockets.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target projeto_so_threads
@@ -144,12 +158,16 @@ build CMakeFiles/projeto_so_threads.dir/main_threads.c.o: C_COMPILER__projeto_so
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/projeto_so_threads.dir
   OBJECT_FILE_DIR = CMakeFiles/projeto_so_threads.dir
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so_threads.dir/
+  TARGET_PDB = projeto_so_threads.pdb
 
 build CMakeFiles/projeto_so_threads.dir/process_sensor_threads.c.o: C_COMPILER__projeto_so_threads_unscanned_Debug /home/joaosousa/CLionProjects/projeto_so/process_sensor_threads.c || cmake_object_order_depends_target_projeto_so_threads
   DEP_FILE = CMakeFiles/projeto_so_threads.dir/process_sensor_threads.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/projeto_so_threads.dir
   OBJECT_FILE_DIR = CMakeFiles/projeto_so_threads.dir
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so_threads.dir/
+  TARGET_PDB = projeto_so_threads.pdb
 
 
 # =============================================================================
@@ -166,8 +184,9 @@ build projeto_so_threads: C_EXECUTABLE_LINKER__projeto_so_threads_Debug CMakeFil
   OBJECT_DIR = CMakeFiles/projeto_so_threads.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so_threads.dir/
   TARGET_FILE = projeto_so_threads
-  TARGET_PDB = projeto_so_threads.dbg
+  TARGET_PDB = projeto_so_threads.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target projeto_so_prodcons
@@ -183,18 +202,24 @@ build CMakeFiles/projeto_so_prodcons.dir/main_prodcons.c.o: C_COMPILER__projeto_
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/projeto_so_prodcons.dir
   OBJECT_FILE_DIR = CMakeFiles/projeto_so_prodcons.dir
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so_prodcons.dir/
+  TARGET_PDB = projeto_so_prodcons.pdb
 
 build CMakeFiles/projeto_so_prodcons.dir/process_sensor_prodcons.c.o: C_COMPILER__projeto_so_prodcons_unscanned_Debug /home/joaosousa/CLionProjects/projeto_so/process_sensor_prodcons.c || cmake_object_order_depends_target_projeto_so_prodcons
   DEP_FILE = CMakeFiles/projeto_so_prodcons.dir/process_sensor_prodcons.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/projeto_so_prodcons.dir
   OBJECT_FILE_DIR = CMakeFiles/projeto_so_prodcons.dir
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so_prodcons.dir/
+  TARGET_PDB = projeto_so_prodcons.pdb
 
 build CMakeFiles/projeto_so_prodcons.dir/utils.c.o: C_COMPILER__projeto_so_prodcons_unscanned_Debug /home/joaosousa/CLionProjects/projeto_so/utils.c || cmake_object_order_depends_target_projeto_so_prodcons
   DEP_FILE = CMakeFiles/projeto_so_prodcons.dir/utils.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/projeto_so_prodcons.dir
   OBJECT_FILE_DIR = CMakeFiles/projeto_so_prodcons.dir
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so_prodcons.dir/
+  TARGET_PDB = projeto_so_prodcons.pdb
 
 
 # =============================================================================
@@ -212,15 +237,16 @@ build projeto_so_prodcons: C_EXECUTABLE_LINKER__projeto_so_prodcons_Debug CMakeF
   OBJECT_DIR = CMakeFiles/projeto_so_prodcons.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/projeto_so_prodcons.dir/
   TARGET_FILE = projeto_so_prodcons
-  TARGET_PDB = projeto_so_prodcons.dbg
+  TARGET_PDB = projeto_so_prodcons.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/joaosousa/CLionProjects/projeto_so/cmake-build-debug && /snap/clion/338/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/joaosousa/CLionProjects/projeto_so/cmake-build-debug && /snap/clion/341/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -231,7 +257,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/joaosousa/CLionProjects/projeto_so/cmake-build-debug && /snap/clion/338/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/joaosousa/CLionProjects/projeto_so -B/home/joaosousa/CLionProjects/projeto_so/cmake-build-debug
+  COMMAND = cd /home/joaosousa/CLionProjects/projeto_so/cmake-build-debug && /snap/clion/341/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/joaosousa/CLionProjects/projeto_so -B/home/joaosousa/CLionProjects/projeto_so/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -265,14 +291,14 @@ build all: phony projeto_so projeto_so_sockets projeto_so_threads projeto_so_pro
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/joaosousa/CLionProjects/projeto_so/CMakeLists.txt /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/joaosousa/CLionProjects/projeto_so/CMakeLists.txt /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompiler.cmake.in /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCompilerIdDetection.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeFindBinUtils.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystem.cmake.in /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeTestCompilerCommon.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CrayClang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/OrangeC-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TIClang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Tasking-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/joaosousa/CLionProjects/projeto_so/CMakeLists.txt /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
+build /home/joaosousa/CLionProjects/projeto_so/CMakeLists.txt /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompiler.cmake.in /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCCompilerABI.c /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCompilerIdDetection.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeFindBinUtils.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystem.cmake.in /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeTestCompilerCommon.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CrayClang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/OrangeC-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TIClang-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Tasking-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /snap/clion/341/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
 
 
 #############################################
