@@ -1,6 +1,6 @@
-# Projeto de Sistemas Operativos - Monitorização da Qualidade do Ar
+# 📡 Projeto de Sistemas Operativos — Monitorização da Qualidade do Ar
 
-Este projeto foi desenvolvido no âmbito da disciplina de **Sistemas Operativos**, com o objetivo de simular um sistema de **monitorização da qualidade do ar** em salas de aula. O sistema utiliza **programação concorrente e paralela em C**, explorando técnicas como **multiprocessamento**, **multithreading**, **comunicação inter-processos** e **sincronização com semáforos**.
+Este projeto foi desenvolvido no âmbito da unidade curricular de **Sistemas Operativos**, com o objetivo de simular um sistema de **monitorização da qualidade do ar** em salas de aula. A implementação recorre a **programação concorrente e paralela em C**, utilizando técnicas como **multiprocessamento**, **multithreading**, **comunicação interprocessos** e **sincronização com semáforos**.
 
 ---
 
@@ -8,42 +8,41 @@ Este projeto foi desenvolvido no âmbito da disciplina de **Sistemas Operativos*
 
 ### Fases Implementadas:
 
-- **Fase 1A-C - Multiprocessamento com Pipes**  
-  Utilização de **`fork()`** e **`pipe()`** para comunicação entre processos. Cada processo filho processa um ficheiro `.csv` com dados de sensores e envia o resultado ao processo pai, que gera o `relatorio.txt`.
+- **Fase 1A-C — Multiprocessamento com Pipes**  
+  Utilização de `fork()` e `pipe()` para criar processos filhos que processam ficheiros `.csv` com dados de sensores. Os resultados são enviados ao processo pai, que gera o ficheiro `relatorio.txt`.
 
-- **Fase 1D - Barra de Progresso com Pipes**  
-  Implementada com `pthread` no processo pai, atualiza dinamicamente conforme os sensores são processados.
+- **Fase 1D — Barra de Progresso com Pipes**  
+  A barra de progresso é implementada **no processo pai**, que a atualiza com base nos dados recebidos pelos `pipes`, à medida que os processos filhos terminam. Esta barra é atualizada dinamicamente no terminal. **Não são usadas threads nesta fase.**
 
-- **Fase 1E - Comunicação com Unix Domain Sockets**  
-  Substituição de pipes por **Unix Domain Sockets**, mantendo a mesma lógica de processamento.
+- **Fase 1E — Comunicação com Unix Domain Sockets**  
+  Substituição dos pipes por **Unix Domain Sockets**, mantendo a lógica de multiprocessamento.
 
-- **Fase 2A - Multithreading com Memória Partilhada**  
-  Cada thread processa um ficheiro de forma concorrente. Os dados são armazenados num array partilhado, gerando o `relatorio_threads.txt`.
+- **Fase 2A — Multithreading com Memória Partilhada**  
+  Uso de `pthread` para processar ficheiros concorrentes. Os resultados são armazenados em memória partilhada e gravados em `relatorio_threads.txt`.
 
-- **Fase 2B - Barra de Progresso com Threads**  
-  A barra de progresso foi implementada e sincronizada corretamente com a variável partilhada `sensores_concluidos`.
+- **Fase 2B — Barra de Progresso com Threads**  
+  Implementada com sincronização por `pthread_mutex` e variável partilhada `sensores_concluidos`.
 
-- **Fase 2C - Sistema Produtor-Consumidor com Semáforos**  
-  Implementado com múltiplas threads produtoras e consumidoras, sincronizadas com `sem_t` e `pthread_mutex`.  
-  Os resultados são guardados no ficheiro `relatorio_prodcons.txt`, ordenados e formatados.
+- **Fase 2C — Sistema Produtor-Consumidor com Semáforos**  
+  Utilização de múltiplas threads produtoras e consumidoras com sincronização por `sem_t` e `pthread_mutex`. Os dados processados são guardados no ficheiro `relatorio_prodcons.txt`.
 
 ---
 
 ## 📂 Estrutura do Projeto
 
 ```
-├── data/                        # Ficheiros CSV dos sensores
-├── main.c                      # Pipes entre processos
-├── main_socket.c              # Comunicação com Unix Domain Sockets
+├── data/                        # Ficheiros CSV de sensores
+├── main.c                      # Versão com pipes entre processos
+├── main_socket.c              # Versão com Unix Domain Sockets
 ├── main_threads.c             # Versão com threads e memória partilhada
-├── main_prodcons.c            # Sistema produtor-consumidor com semáforos
-├── process_sensor.c           # Processamento com fork() + pipes
-├── process_sensor_threads.c   # Processamento com pthreads
-├── process_sensor_prodcons.c  # Processamento com produtor/consumidor
-├── relatorio.txt              # Resultado da versão com pipes
-├── relatorio_sockets.txt      # Resultado da versão com sockets
-├── relatorio_threads.txt      # Resultado da versão com threads
-├── relatorio_prodcons.txt     # Resultado da versão com semáforos
+├── main_prodcons.c            # Sistema produtor-consumidor
+├── process_sensor.c           # Lógica de processamento com fork()
+├── process_sensor_threads.c   # Lógica de processamento com threads
+├── process_sensor_prodcons.c  # Lógica com produtor/consumidor
+├── relatorio.txt              # Saída da versão com pipes
+├── relatorio_sockets.txt      # Saída da versão com sockets
+├── relatorio_threads.txt      # Saída da versão com threads
+├── relatorio_prodcons.txt     # Saída da versão com semáforos
 └── README.md                  # Este ficheiro
 ```
 
@@ -51,7 +50,7 @@ Este projeto foi desenvolvido no âmbito da disciplina de **Sistemas Operativos*
 
 ## ▶️ Como Executar
 
-### 1. Clone o repositório:
+### 1. Clonar o repositório:
 
 ```bash
 git clone https://github.com/JoaoCoelho03/ProjetoSistemasOperativos.git
@@ -61,52 +60,51 @@ cd ProjetoSistemasOperativos
 ### 2. Compilar:
 
 ```bash
-make  # ou gcc manual com -lpthread, dependendo do ficheiro
+make
 ```
+
+> Ou usar manualmente:  
+> `gcc -o main main.c -lpthread` (e variantes consoante o ficheiro)
 
 ### 3. Executar:
 
-#### 📌 Pipes (Fase 1A-C)
+- **Fase 1A-C (Pipes):**
+  ```bash
+  ./main data/
+  ```
 
-```bash
-./main data/
-```
+- **Fase 1E (Sockets):**
+  ```bash
+  ./main_socket data/
+  ```
 
-#### 📌 Unix Domain Sockets (Fase 1E)
+- **Fase 2A-B (Threads):**
+  ```bash
+  ./main_threads data/
+  ```
 
-```bash
-./main_socket data/
-```
-
-#### 📌 Threads (Fase 2A-B)
-
-```bash
-./main_threads data/
-```
-
-#### 📌 Produtor-Consumidor com Semáforos (Fase 2C)
-
-```bash
-./main_prodcons
-```
+- **Fase 2C (Produtor-Consumidor):**
+  ```bash
+  ./main_prodcons
+  ```
 
 ---
 
 ## 📊 Barra de Progresso
 
-Em `main`, `main_socket` e `main_threads`, a barra de progresso aparece no terminal em tempo real:
+Em `main`, `main_socket` e `main_threads`, uma barra de progresso é exibida dinamicamente no terminal:
 
 ```
-Progresso: [=====>     ] 50%
+Progresso: [========>      ] 60%
 ```
 
 ---
 
 ## 🧵 Sistema Produtor-Consumidor
 
-- **2 produtoras** geram 20 sensores fictícios.
-- **2 consumidoras** processam e guardam os resultados.
-- Dados são ordenados e guardados em `relatorio_prodcons.txt` no seguinte formato:
+- **2 produtoras** simulam sensores fictícios (20 sensores).
+- **2 consumidoras** processam os dados e escrevem no relatório.
+- Saída no ficheiro `relatorio_prodcons.txt`, com o formato:
 
 ```
 SensorID;Média;HorasFora
@@ -119,7 +117,7 @@ Sensor_1;86.00;2.00
 
 ## ⏱ Medição de Desempenho
 
-O tempo de execução é exibido automaticamente ao final da versão `main_prodcons`:
+Ao final da execução do `main_prodcons`, o tempo total de execução é apresentado:
 
 ```
 Tempo total de execução: 0.721000 segundos
@@ -129,12 +127,12 @@ Tempo total de execução: 0.721000 segundos
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a **Licença MIT**. Ver `LICENSE`.
+Este projeto está licenciado sob a **Licença MIT**. Ver ficheiro `LICENSE`.
 
 ---
 
 ## 👨‍🏫 Agradecimentos
 
-- **Professores**: Pedro Sobral e João Viana  
+- **Professores:** Pedro Sobral e João Viana  
 - **Universidade Fernando Pessoa – Engenharia Informática**  
-- Orientação e feedback ao longo do desenvolvimento
+- Pela orientação e feedback contínuo ao longo do projeto.
