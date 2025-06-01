@@ -1,5 +1,5 @@
-8876;sensor.alpendorada_sala_10_particulate_matter_2_5um_concentration;5.83;101.00
-8877;sensor.alpendorada_sala_10_dht_temperature;24.69;0.00
-8878;sensor.alpendorada_sala_10_particulate_matter_10_0um_concentration;6.15;40.00
-8879;sensor.alpendorada_sala_10_co2_value;649.11;761.30
-8880;sensor.alpendorada_sala_10_dht_humidity;58.68;0.00
+46627;sensor.alpendorada_sala_10_particulate_matter_2_5um_concentration;5.83;101.00
+46628;sensor.alpendorada_sala_10_dht_temperature;24.69;3423.00
+46629;sensor.alpendorada_sala_10_particulate_matter_10_0um_concentration;6.15;40.00
+46630;sensor.alpendorada_sala_10_co2_value;649.11;761.30
+46631;sensor.alpendorada_sala_10_dht_humidity;58.68;508.00

@@ -1,5 +1,5 @@
 Thread 0;sensor.alpendorada_sala_10_particulate_matter_2_5um_concentration;5.83;101.000000
-Thread 1;sensor.alpendorada_sala_10_dht_temperature;24.69;0.000000
+Thread 1;sensor.alpendorada_sala_10_dht_temperature;24.69;3423.000000
 Thread 2;sensor.alpendorada_sala_10_particulate_matter_10_0um_concentration;6.15;40.000000
 Thread 3;sensor.alpendorada_sala_10_co2_value;649.11;761.300000
-Thread 4;sensor.alpendorada_sala_10_dht_humidity;58.68;0.000000
+Thread 4;sensor.alpendorada_sala_10_dht_humidity;58.68;508.000000

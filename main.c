@@ -65,33 +65,37 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    char buffer[256];
     int ficheiros_processados = 0;
-    time_t ultimo_update = time(NULL);
 
     for (int i = 0; i < num_ficheiros; i++) {
-        readn(pipes[i][0], buffer, sizeof(buffer));
+        char buffer[256];
+        int idx = 0;
+        char c;
+
+        // Ler até encontrar '\0'
+        while (read(pipes[i][0], &c, 1) > 0 && idx < sizeof(buffer) - 1) {
+            buffer[idx++] = c;
+            if (c == '\0') break;
+        }
+        buffer[idx] = '\0';
+
         fprintf(saida, "%s\n", buffer);
         close(pipes[i][0]);
 
         ficheiros_processados++;
 
-        time_t agora = time(NULL);
-        if (difftime(agora, ultimo_update) >= 5 || ficheiros_processados == total_sensores) {
-            int percent = (ficheiros_processados * 100) / total_sensores;
-            int barras = percent / 10;
+        // Atualizar barra de progresso após cada ficheiro
+        int percent = (ficheiros_processados * 100) / total_sensores;
+        int barras = percent / 10;
 
-            printf("\rProgresso: [");
-            for (int j = 0; j < 10; j++) {
-                if (j < barras) printf("=");
-                else if (j == barras) printf(">");
-                else printf(" ");
-            }
-            printf("] %d%%", percent);
-            fflush(stdout);
-
-            ultimo_update = agora;
+        printf("\rProgresso: [");
+        for (int j = 0; j < 10; j++) {
+            if (j < barras) printf("=");
+            else if (j == barras) printf(">");
+            else printf(" ");
         }
+        printf("] %d%%", percent);
+        fflush(stdout);
     }
 
     fclose(saida);

@@ -22,8 +22,8 @@ time_t parse_timestamp(const char *timestamp) {
 }
 
 int fora_do_intervalo(const char *sensor, double valor) {
-    if (strstr(sensor, "temperatura")) return (valor < 18 || valor > 27);
-    if (strstr(sensor, "humidade")) return (valor < 30 || valor > 70);
+    if (strstr(sensor, "Temperatura")) return (valor < 18 || valor > 27);
+    if (strstr(sensor, "Humidade")) return (valor < 30 || valor > 70);
     if (strstr(sensor, "pm2.5") || strstr(sensor, "PM2.5")) return (valor >= 25);
     if (strstr(sensor, "pm10") || strstr(sensor, "PM10")) return (valor >= 50);
     if (strstr(sensor, "co2") || strstr(sensor, "CO2")) return (valor > 1000);
