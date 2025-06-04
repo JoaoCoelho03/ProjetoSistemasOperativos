@@ -63,3 +63,17 @@
 52	78	1748810897750549235	projeto_so	44e3a805b37d3863
 3	103	1748810905851438635	CMakeFiles/projeto_so.dir/main.c.o	c11e215883c3d3c7
 103	126	1748810905951437283	projeto_so	44e3a805b37d3863
+357	1356	1749079430483344595	CMakeFiles/projeto_so.dir/main.c.o	c11e215883c3d3c7
+1356	1719	1749079431482352680	projeto_so	44e3a805b37d3863
+3	92	1749079559473380198	CMakeFiles/projeto_so.dir/main.c.o	c11e215883c3d3c7
+92	141	1749079559562380907	projeto_so	44e3a805b37d3863
+3	84	1749079620761866995	CMakeFiles/projeto_so_sockets.dir/main_sockets.c.o	de50df2bc81391af
+84	166	1749079620842867637	projeto_so_sockets	18e1f28e299ffa6
+3	112	1749079691129422382	CMakeFiles/projeto_so_threads.dir/main_threads.c.o	1ef0f27718dd678e
+112	143	1749079691238423240	projeto_so_threads	e19bc020ad86fb37
+2	72	1749079806345324853	CMakeFiles/projeto_so_threads.dir/main_threads.c.o	1ef0f27718dd678e
+2	68	1749079962293535372	CMakeFiles/projeto_so_threads.dir/main_threads.c.o	1ef0f27718dd678e
+2	88	1749079966723569606	CMakeFiles/projeto_so_threads.dir/main_threads.c.o	1ef0f27718dd678e
+88	124	1749079966809570270	projeto_so_threads	e19bc020ad86fb37
+2	61	1749079975655638607	CMakeFiles/projeto_so_threads.dir/main_threads.c.o	1ef0f27718dd678e
+61	85	1749079975714639062	projeto_so_threads	e19bc020ad86fb37

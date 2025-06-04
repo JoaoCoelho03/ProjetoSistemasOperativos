@@ -56,6 +56,8 @@ int main(int argc, char *argv[]) {
     }
 
     FILE *saida = fopen("relatorio_socket.txt", "w");
+    int ficheiros_processados = 0;
+
     for (int i = 0; i < num_ficheiros; i++) {
         int client_sock = accept(server_sock, NULL, NULL);
         char buffer[256];
@@ -63,6 +65,24 @@ int main(int argc, char *argv[]) {
         fprintf(saida, "%s\n", buffer);
         close(client_sock);
         free(ficheiros[i]);
+
+        ficheiros_processados++;
+        sleep(1); // Simula tempo para ver a barra a atualizar
+
+        float percent = (ficheiros_processados * 100.0f) / num_ficheiros;
+        int blocos = percent / 10;
+
+        printf("\rCiclo %d/%d concluído - Progresso: [", ficheiros_processados, num_ficheiros);
+        for (int j = 0; j < 10; j++) {
+            if (j < blocos)
+                printf("=");
+            else if (j == blocos)
+                printf(">");
+            else
+                printf(" ");
+        }
+        printf("] %.0f%%", percent);
+        fflush(stdout);
     }
 
     fclose(saida);
@@ -71,6 +91,6 @@ int main(int argc, char *argv[]) {
 
     for (int i = 0; i < num_ficheiros; i++) wait(NULL);
 
-    printf("Relatório com sockets gerado: relatorio_socket.txt\n");
+    printf("\nRelatório com sockets gerado: relatorio_socket.txt\n");
     return 0;
 }

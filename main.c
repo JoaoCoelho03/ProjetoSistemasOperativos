@@ -81,20 +81,23 @@ int main(int argc, char *argv[]) {
 
         fprintf(saida, "%s\n", buffer);
         close(pipes[i][0]);
+        sleep(1);
 
         ficheiros_processados++;
 
-        // Atualizar barra de progresso após cada ficheiro
-        int percent = (ficheiros_processados * 100) / total_sensores;
-        int barras = percent / 10;
+        float percent = (ficheiros_processados * 100.0f) / total_sensores;
+        int blocos = percent / 10;
 
-        printf("\rProgresso: [");
+        printf("\rCiclo %d/%d concluído - Progresso: [", ficheiros_processados, total_sensores);
         for (int j = 0; j < 10; j++) {
-            if (j < barras) printf("=");
-            else if (j == barras) printf(">");
-            else printf(" ");
+            if (j < blocos)
+                printf("=");
+            else if (j == blocos)
+                printf(">");
+            else
+                printf(" ");
         }
-        printf("] %d%%", percent);
+        printf("] %.0f%%", percent);
         fflush(stdout);
     }
 
