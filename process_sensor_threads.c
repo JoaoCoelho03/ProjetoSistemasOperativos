@@ -8,8 +8,11 @@
 #include <sys/stat.h>
 #include <time.h>
 #include "process_sensor_threads.h"
+
 #include <pthread.h>
 
+// Referências externas
+extern pthread_mutex_t mutex;
 extern volatile int sensores_concluidos;
 
 #define TIME_FORMAT "%Y-%m-%dT%H:%M:%S"
@@ -91,6 +94,9 @@ void *processar_sensor_thread(void *args) {
     res->horas_fora = fora;
     strncpy(res->nome_sensor, sensor_name, sizeof(res->nome_sensor));
 
+    pthread_mutex_lock(&mutex);
     sensores_concluidos++;
+    pthread_mutex_unlock(&mutex);
+
     pthread_exit(NULL);
 }

@@ -6,10 +6,12 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include "process_sensor_threads.h"
-
+#include <pthread.h>
 #define MAX_FILES 100
 
+
 volatile int sensores_concluidos = 0;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 bool progresso_ativo = true;
 
 void *barra_progresso(void *arg) {
@@ -91,6 +93,8 @@ int main(int argc, char *argv[]) {
                 resultados[i].horas_fora);
     }
     fclose(saida);
+
+    pthread_mutex_destroy(&mutex);
 
     printf("Relatório com threads gerado: relatorio_threads.txt\n");
     return 0;

@@ -77,3 +77,9 @@
 88	124	1749079966809570270	projeto_so_threads	e19bc020ad86fb37
 2	61	1749079975655638607	CMakeFiles/projeto_so_threads.dir/main_threads.c.o	1ef0f27718dd678e
 61	85	1749079975714639062	projeto_so_threads	e19bc020ad86fb37
+508	6188	1749080619344555994	CMakeFiles/projeto_so_threads.dir/main_threads.c.o	1ef0f27718dd678e
+1	49	1749080630669641876	CMakeFiles/projeto_so_threads.dir/main_threads.c.o	1ef0f27718dd678e
+49	72	1749080630717642240	projeto_so_threads	e19bc020ad86fb37
+4	156	1749081847856784161	CMakeFiles/projeto_so_threads.dir/process_sensor_threads.c.o	cd4c0df5b6d18672
+3	53	1749081884926075861	CMakeFiles/projeto_so_threads.dir/main_threads.c.o	1ef0f27718dd678e
+53	79	1749081884976076254	projeto_so_threads	e19bc020ad86fb37
